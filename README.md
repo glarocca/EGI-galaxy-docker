@@ -1,4 +1,4 @@
 # EGI-galaxy-docker
-Used the generic Apache External User Authentication mechanism and the docker-compose.xml file to enable federated access to a Galaxy Docker installation [1].
+Used the generic <a href="https://galaxyproject.org/admin/config/apache-external-user-auth/">Apache External User Authentication </a>mechanism and the docker-compose.xml file to enable federated access to a <a href="https://hub.docker.com/r/bgruening/galaxy-stable">Galaxy Docker installation</a>.
 
-[1] https://hub.docker.com/r/bgruening/galaxy-stable
+In this case, Apache2 + Shibboleth module are configured to pass the federated user id to Galaxy through the $REMOTE_USER variable.
