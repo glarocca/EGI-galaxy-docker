@@ -8,8 +8,7 @@ Used the generic <a href="https://galaxyproject.org/admin/config/apache-external
 
 * The Apache2 + Shibboleth docker container used to proxy the Galaxy container has to be registered in the DNS.
 * A trusted host certificates for the Apache2 + Shibboleth docker container is needed.
-* The Apache2 + Shibboleth docker container has to be registered as Service Provider (SP) in the EGI AAI Check-In DEV instance.
-**To do so, you have to send the SAML metadata of the new SP to nliam \<at\> grnet.gr.
+* The Apache2 + Shibboleth docker container has to be registered as Service Provider (SP) in the EGI AAI Check-In DEV instance. To register the SP, the SAML metadata of the sever has to be sent to: nliam \<at\> grnet.gr.
 
 ## License
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this project except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
