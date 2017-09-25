@@ -2,7 +2,7 @@
 Used the generic <a href="https://galaxyproject.org/admin/config/apache-external-user-auth/">Apache External User Authentication</a> mechanism and the docker-compose.xml file to enable federated access to a <a href="https://hub.docker.com/r/bgruening/galaxy-stable">Galaxy Docker installation</a>.
 
 * In this case, Apache2 + Shibboleth module are configured to pass the federated user id to Galaxy through the $REMOTE_USER variable.
-* The server hostname where the Apache2 + Shibboleth module will be deployed is: https://galaxy-hub.fedcloud-tf.fedcloud.eu/
+* The server hostname where the Apache2 + Shibboleth module will be deployed is: https://galaxy-docker.fedcloud-tf.fedcloud.eu/
 
 ## Requirements
 * The Apache2 + Shibboleth docker container used to proxy the Galaxy container has to be registered in the DNS.
