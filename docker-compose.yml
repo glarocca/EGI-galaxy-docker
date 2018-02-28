@@ -7,10 +7,10 @@ services:
     ports:
      - "80:80"
      - "443:443"
+    links:
+     - galaxy
 
   galaxy:
-    depends_on:
-     - apache2
     image: bgruening/galaxy-stable
     container_name: galaxy
     ports:
@@ -30,9 +30,8 @@ services:
      - GALAXY_CONFIG_GALAXY_INFRASTRUCTURE_WEB_PORT=443
      - GALAXY_CONFIG_TOOL_CONFIG_FILE=config/tool_conf.xml.sample,config/shed_tool_conf.xml.sample,/local_tools/tool_conf.xml
      - GALAXY_CONFIG_INTERACTIVE_ENVIRONMENT_PLUGINS_DIRECTORY=config/plugins/interactive_environments
-     - GALAXY_CONFIG_TOOL_CONFIG_FILE=config/tool_conf.xml.sample,config/shed_tool_conf.xml.sample,/local_tools/tool_conf.xml
      - GALAXY_CONFIG_REMOTE_USER_LOGOUT_HREF=https://galaxy-docker.fedcloud-tf.fedcloud.eu/Shibboleth.sso/Logout
-     - GALAXY_CONFIG_ADMIN_USERS=025166931789a0f57793a6092726c2ad89387a4cc167e7c63c5d85fc91021d18@egi.eu
+     - GALAXY_CONFIG_ADMIN_USERS=025166931789a0f57793a6092726c2ad89387a4cc167e7c63c5d85fc91021d18@egi.eu, 529a87e5ce04cd5ddd7161734d02df0e2199a11452430803e714cb1309cc3907@egi.eu, bf7f0e957d7d0566dfb8f7070deceb1e83805e679f913daaf35b50751c893227@egi.eu
     volumes:
      - "/var/run/docker.sock:/var/run/docker.sock"
      - "/mnt/galaxy_storage:/export/"
